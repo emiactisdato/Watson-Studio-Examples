@@ -1,21 +1,22 @@
-# From wild idea to AI app:
-## How Watson Studio can help you rapidly prototype AI solutions
-### Search-and-rescue app
+# IBM Cloud and Data Argentina 2019:
+## Cómo puede Watson Studio ayudarte a rápidamente crear un prototipo de una solución de IA
+### Una app de búsqueda y rescate
 
-IBM Watson Studio has powerful machine learning and deep learning features. But did you know it also has simple tools for quickly training and deploying AI models and for prototyping app code? This example shows you how to train a visual recognition model using the graphical model builder in Watson Studio and then create a web app that uses that model.
+IBM Watson Studio tiene potentes capacidades de machine y deep learning. Pero sabías que también tiene herramientas simples para rápidamente entrenar y desplegar modelos de IA y para crear prototipos de aplicaciones?
+Este ejemplo muestra cómo entrenar un modelo de reconocimiento visual utilizando el graphical model builder de Watson Studio. Luego, cómo crear una web app que use este modelo.
 
-This sample demonstrates how to build a web app that uses a visual recognition model to classify images from drone footage:
+Este ejemplo explica cómo construir una web app que utiliza un modelo de visual recognition para clasificar imágenes obtenidas por drones:
 
 <img src="readme-images/train-sar-model.png" width="60%"/>
 
-This sample includes:
-- Training data and test images (frames from drone video footage)
-- A short Python notebook for testing the model 
-- A longer Python notebook for prototyping app code
-- Python Flask web app code
-- Instructions and videos showing how to train and test the visual recognition model in [IBM Watson Studio](https://cloud.ibm.com/catalog/services/watson-studio), how to run the web app on your local computer, and how to push the web app to IBM Cloud
+Este ejemplo incluye:
+- Imágenes para entrenamiento y prueba del modelo (capturas gráficas de un video obtenido desde un dron)
+- Un Python notebook para probar el modelo 
+- Otro Python notebook para crear el prototipo de la app
+- El código de una Python Flask web app
+- Instrucciones y videos que explican cómo entrenar y probar el modelo de reconocimiento de imágenes en [IBM Watson Studio](https://cloud.ibm.com/catalog/services/watson-studio), cómo ejecutar una web app desde tu computadora, y cómo desplegar esta web app en IBM Cloud.
 
-You can complete this sample using the free (Lite) version of these services:
+Podés completar este ejemplo usando la versión gratuita (Lite) de estos servicios dentro de IBM Cloud:
 - [IBM Cloud](https://cloud.ibm.com/registration)
 - [IBM Watson Studio](https://cloud.ibm.com/catalog/services/watson-studio)
 - [IBM Watson Visual Recognition](https://cloud.ibm.com/catalog/services/visual-recognition)
@@ -23,29 +24,21 @@ You can complete this sample using the free (Lite) version of these services:
 
 <p>&nbsp;</p>
 
-
-## Demo video
-<a href="https://youtu.be/MbfYNncjO8Q">https://youtu.be/MbfYNncjO8Q</a>
-
-<a href="https://youtu.be/MbfYNncjO8Q"><img src="readme-images/thumbnail-sar-demo-video.png" width="75%"/></a>
-
-<p>&nbsp;</p>
-
-## Instructions
-These instructions describe how to build the sample web app with given images for training and testing.
+## Instrucciones
+Estas instrucciones describen cómo construir la web app de ejemplo con las imágenes de entrenamiento y prueba.
 
 <p>&nbsp;</p>
 
 
-### Prerequisites
+### Pre-requisitos
 
 <ol>
-<li><p>Sign up for IBM Cloud: <a href="https://www.ibm.com/cloud/">IBM Cloud sign up</a></p></li>
-<li><p>Create an instance of the IBM Watson Studio service on IBM Cloud: <a href="https://cloud.ibm.com/catalog/services/watson-studio">IBM Watson Studio</a></p></li>
-<li><p>Create a project in Watson Studio:</p>
+<li><p>Crear una cuenta gratuita (Lite) en IBM Cloud (si ya tenés una cuenta creada, podés usar esa): <a href="https://www.ibm.com/cloud/">IBM Cloud sign up</a></p></li>
+<li><p>Craear una instancia del servicio IBM Watson Studio en IBM Cloud: <a href="https://cloud.ibm.com/catalog/services/watson-studio">IBM Watson Studio</a></p></li>
+<li><p>Crear un proyecto en Watson Studio:</p>
     <ol>
-    <li>Go to https://dataplatform.cloud.ibm.com and log in (if you are not already logged in)</li>
-    <li>Click <b>New project</b>, select <b>Visual Recognition</b>, and then follow the prompts to associate needed services with the project: IBM Cloud Object Storage and IBM Watson Visual Recognition.</li>
+    <li>Ir a https://dataplatform.cloud.ibm.com y hacer log in (si es que ya no lo habías hecho antes)</li>
+    <li>Hacer click en <b>New project</b>, seleccionar <b>Visual Recognition</b>, y luego seguir los pasos para asociar los servicios necesarios para el proyecto: IBM Cloud Object Storage e IBM Watson Visual Recognition.</li>
     </ol>
     <p>See also: <a href="https://dataplatform.cloud.ibm.com/docs/content/getting-started/projects.html">Creating projects</a></li>
 <li><p>To be able to run the sample web app on your local computer, <a href="https://www.python.org">install Python</a></p>
